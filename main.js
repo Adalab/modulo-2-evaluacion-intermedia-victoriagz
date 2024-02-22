@@ -13,6 +13,10 @@ function getRandomNumber(max) {
   console.log(randomNumber);
 
   let acumulator = 0;
+  const add = () => {
+    acumulator = acumulator + 1;
+    counter.innerHTML = acumulator;
+}
 
 //   FUNCION CONDICIONALES 
 function handleInput() {
@@ -28,10 +32,6 @@ function handleInput() {
         clue.innerHTML = 'Has ganado CAMPEONA!!!!!'
     }
 
-   const add = () => {
-        acumulator = acumulator + 1;
-        counter.innerHTML = acumulator;
-    }
     add();
 }
 
