@@ -4,13 +4,15 @@ const inputNumber = document.querySelector('.js-input');
 const button = document.querySelector('.js-button');
 const counter = document.querySelector('.js-counter');
 const clue = document.querySelector('.js-clue');
+const reset = document.querySelector('.js-button-again');
 
 // FUNCION PARA NUMERO ALEATORIO
 function getRandomNumber(max) { 
     return Math.ceil(Math.random() * max); 
   }
-  const randomNumber = getRandomNumber(100);
-  console.log(randomNumber);
+let randomNumber = getRandomNumber(100);
+console.log(randomNumber);
+
 
 //   ====================================================
 // ACUMULADOR PARA EL CONTADOR DE CLICKS
@@ -38,5 +40,15 @@ function handleInput() {
     add();
 }
 
+const handleReset = () => {
+    randomNumber = getRandomNumber(100);
+    console.log('Numero aleatorio nuevo: ', randomNumber);
+    clue.innerHTML = 'Pista: escribe un número y dale a prueba';
+    counter.innerHTML = '0';
+    inputNumber.setAttribute('placeholder', 'Introduce un número');
 
+}
+
+reset.addEventListener('click', handleReset);
 button.addEventListener('click', handleInput);
+
