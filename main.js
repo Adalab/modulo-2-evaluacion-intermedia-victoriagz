@@ -12,6 +12,9 @@ function getRandomNumber(max) {
   const randomNumber = getRandomNumber(100);
   console.log(randomNumber);
 
+//   ====================================================
+// ACUMULADOR PARA EL CONTADOR DE CLICKS
+
   let acumulator = 0;
   const add = () => {
     acumulator = acumulator + 1;
@@ -27,15 +30,13 @@ function handleInput() {
     } else if (valueNumber > randomNumber){
         clue.innerHTML = 'El número es demasiado alto...'
     } else if (valueNumber < randomNumber){
-        clue.innerHTML = 'El numero es demasiado bajo...'
+        clue.innerHTML = 'El número es demasiado bajo...'
     } else {
         clue.innerHTML = 'Has ganado CAMPEONA!!!!!'
     }
 
     add();
 }
-
-
 
 
 button.addEventListener('click', handleInput);
