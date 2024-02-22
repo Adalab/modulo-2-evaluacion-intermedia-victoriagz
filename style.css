@@ -1,0 +1,77 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1); 
+    }
+    50% {
+        transform: scale(1.2); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}
+
+.tittle {
+    font-size: 70px;
+    color: hwb(304 54% 29%);
+    animation: scale 3s ease-in-out infinite alternate; 
+}
+
+
+.js-input {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.js-button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: pink;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.js-button:hover {
+    background-color: hsl(317, 26%, 61%);
+}
+
+
+.js-clue {
+    color: hsl(0, 85%, 31%);
+}
+
+
+.counter {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+}
